@@ -1,5 +1,36 @@
 <!doctype html><html lang="zh-Hant"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
 <title>DoGa 審片站</title><link rel="icon" href="icon-32.png"><link rel="apple-touch-icon" href="icon-180.png"><meta name="robots" content="noindex">
-<script>var h=location.hash.slice(1),m=h.match(/^(.*\/)([^\/]+\.(mp4|mov|m4v))$/i),t=m?m[1]+"#play="+m[2]:h,go=function(u){location.replace(u+t)};fetch("u.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(u){u=u.trim();go(/^https:/.test(u)?u:"https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/")}).catch(function(){go("https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/")})</script>
-<noscript><meta http-equiv="refresh" content="0;url=https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/"></noscript></head>
-<body style="font-family:-apple-system,sans-serif;text-align:center;padding:40px;background:#FFF6E5">審片站開啟中… <a href="https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/">沒跳轉請點這裡</a></body></html>
+<style>
+body{margin:0;min-height:100vh;display:flex;align-items:center;justify-content:center;background:#fff;font-family:-apple-system,"PingFang TC",sans-serif;color:#171111}
+#f{display:none;width:min(280px,76vw);text-align:center}img.h{width:96px;height:auto}h1{font-size:20px;margin:4px 0 4px}
+input{width:100%;box-sizing:border-box;font-size:16px;padding:10px 12px;margin:0 0 9px;border:1.5px solid #ccc;border-radius:10px;background:#fff}
+input:focus{outline:none;border-color:#FF941F}
+button{width:100%;font-size:17px;font-weight:800;padding:11px;border:0;border-radius:10px;background:#FFCE00;color:#171111;cursor:pointer}
+.m{color:#FF5437;font-weight:700;margin:0 0 10px;font-size:15px;min-height:0}.alt{margin-top:14px;font-size:15px}.alt a{color:#FF941F;font-weight:700;text-decoration:none}
+.n{color:#444;font-size:16px;line-height:1.7;margin:18px 0 0}#w{color:#888}
+</style></head><body>
+<div id="w">審片站開啟中…</div>
+<form id="f" method="post" action="#"><img class="h" src="hero-plush.png" alt=""><h1>DoGa 審片站</h1><p class="m" id="m"></p>
+<input id="u" name="username" placeholder="帳號" autocomplete="username" autocapitalize="none" required>
+<input id="p" name="password" type="password" placeholder="密碼" autocomplete="current-password" required>
+<button id="b">登入</button>
+<div class="alt">第一次來？<a id="r" href="#">註冊帳號</a></div>
+<p class="n">親愛的顧問、威辰：<br>為了守住 DoGa 的獨家小祕密 🤫，審片站改成帳號登入囉！<br>請先註冊一組帳密，只要註冊一次，之後直接登入就好。</p></form>
+<script>
+var FB="https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/",K="dgk",h=location.hash.slice(1),U=null;
+function base(){return U?Promise.resolve(U):fetch("u.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(u){u=u.trim();return U=/^https:/.test(u)?u:FB}).catch(function(){return U=FB})}
+function auto(k,n){base().then(function(u){location.replace(u+"_auto#"+encodeURIComponent(JSON.stringify({k:k,n:n||""})))})}
+function form(msg,nx){document.getElementById("w").style.display="none";var f=document.getElementById("f");f.style.display="block";document.getElementById("m").textContent=msg||"";
+ base().then(function(u){document.getElementById("r").href=u+"_register"});
+ f.onsubmit=function(e){e.preventDefault();var b=document.getElementById("b");b.disabled=true;b.textContent="登入中…";
+  base().then(function(u){return fetch(u+"_api/login",{method:"POST",body:JSON.stringify({u:document.getElementById("u").value,pw:document.getElementById("p").value})})})
+  .then(function(r){return r.json()}).then(function(d){if(d.ok){localStorage.setItem(K,d.k);auto(d.k,nx)}else{document.getElementById("m").textContent=d.msg||"登入失敗";b.disabled=false;b.textContent="登入"}})
+  .catch(function(){document.getElementById("m").textContent="連不上審片站，請稍後再試";b.disabled=false;b.textContent="登入"})}}
+function q(s,k){var m=s.match(new RegExp("[?&]"+k+"=([^&]*)"));return m?decodeURIComponent(m[1]):""}
+if(h.indexOf("_set=")==0){try{var d=JSON.parse(decodeURIComponent(h.slice(5)));localStorage.setItem(K,d.k);history.replaceState(null,"",location.pathname);auto(d.k,d.n)}catch(e){form()}}
+else if(h.indexOf("_logout")==0){localStorage.removeItem(K);history.replaceState(null,"",location.pathname);form("已登出")}
+else if(h.indexOf("_login")==0){var nx=q(h,"next");if(q(h,"bad")){localStorage.removeItem(K);form("",nx)}else if(localStorage.getItem(K))auto(localStorage.getItem(K),nx);else form("",nx)}
+else{var m=h.match(/^(.*\/)([^\/]+\.(mp4|mov|m4v))$/i),t=m?m[1]+"#play="+m[2]:h,k=localStorage.getItem(K);
+ if(k)auto(k,t);else base().then(function(u){location.replace(u+t)})}
+</script>
+<noscript><a href="https://ahead-mild-garcia-motherboard.trycloudflare.com/fwtxkqn6DKY_uyWs-ajY2Wuv/">打開審片站</a></noscript></body></html>
