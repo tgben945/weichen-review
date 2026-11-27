@@ -7,7 +7,7 @@ input{width:100%;box-sizing:border-box;font-size:16px;padding:10px 12px;margin:0
 input:focus{outline:none;border-color:#FF941F}
 button{width:100%;font-size:17px;font-weight:800;padding:11px;border:0;border-radius:10px;background:#FFCE00;color:#171111;cursor:pointer}
 .m{color:#FF5437;font-weight:700;margin:0 0 10px;font-size:15px;min-height:0}.alt{margin-top:14px;font-size:15px}.alt a{color:#FF941F;font-weight:700;text-decoration:none}
-.n{color:#444;font-size:16px;line-height:1.7;margin:18px 0 0}#w{color:#888}
+.n{color:#444;font-size:16px;line-height:1.7;margin:18px 0 0;padding:12px 14px;border:2px dashed #FF941F;border-radius:18px;text-align:left}#w{color:#888}
 </style></head><body>
 <div id="w">審片站開啟中…</div>
 <form id="f" method="post" action="#"><img class="h" src="hero-plush.png" alt=""><h1>DoGa 審片站</h1><p class="m" id="m"></p>
@@ -15,7 +15,7 @@ button{width:100%;font-size:17px;font-weight:800;padding:11px;border:0;border-ra
 <input id="p" name="password" type="password" placeholder="密碼" autocomplete="current-password" required>
 <button id="b">登入</button>
 <div class="alt">第一次來？<a id="r" href="#">註冊帳號</a></div>
-<p class="n">親愛的顧問、威辰：<br>為了守住 DoGa 的獨家小祕密 🤫，審片站改成帳號登入囉！<br>請先註冊一組帳密，只要註冊一次，之後直接登入就好。</p></form>
+<p class="n">💌 親愛的顧問、威辰：<br>為了守住 DoGa 的獨家小祕密 🤫，審片站改成帳號登入囉！<br>請先註冊一組帳密，只要註冊一次，之後直接登入就好。</p></form>
 <script>
 var FB="__U__",K="dgk",h=location.hash.slice(1),U=null;
 function base(){return U?Promise.resolve(U):fetch("u.txt?t="+Date.now(),{cache:"no-store"}).then(function(r){return r.text()}).then(function(u){u=u.trim();return U=/^https:/.test(u)?u:FB}).catch(function(){return U=FB})}
